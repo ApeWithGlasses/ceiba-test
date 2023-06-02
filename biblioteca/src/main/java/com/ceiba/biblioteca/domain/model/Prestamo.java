@@ -1,7 +1,9 @@
 package com.ceiba.biblioteca.domain.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
@@ -23,9 +25,6 @@ public class Prestamo {
 
     @Column(name = "fecha_maxima_devolucion")
     private LocalDate fechaMaximaDevolucion;
-
-    @Transient
-    private String errorMessage;
 
     public Prestamo() {
     }
@@ -76,13 +75,5 @@ public class Prestamo {
 
     public void setFechaMaximaDevolucion(LocalDate fechaMaximaDevolucion) {
         this.fechaMaximaDevolucion = fechaMaximaDevolucion;
-    }
-
-    public String getErrorMessage() {
-        return errorMessage;
-    }
-
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
     }
 }
