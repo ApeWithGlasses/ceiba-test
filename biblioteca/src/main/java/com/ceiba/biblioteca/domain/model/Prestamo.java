@@ -1,8 +1,5 @@
 package com.ceiba.biblioteca.domain.model;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 
